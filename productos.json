@@ -1,0 +1,114 @@
+[
+  {
+    "nombre": "Lego F1 Ferrari",
+    "precio": 500,
+    "url": "https://a.co/d/03Psqxex",
+    "ilustracion": "racecar",
+    "categoria": "Coleccionables",
+    "tienda": "Amazon"
+  },
+  {
+    "nombre": "Mini balón Mundial",
+    "precio": 300,
+    "url": "https://www.adidas.mx/minibalon-finales-trionda-copa-mundial-de-la-fifa-26/KE4328.html",
+    "ilustracion": "ball-world",
+    "categoria": "Fútbol",
+    "tienda": "adidas"
+  },
+  {
+    "nombre": "Mini balón Argentina",
+    "precio": 400,
+    "url": "https://www.adidas.mx/minibalon-argentum-gambeta-seleccion-argentina/KE5085.html",
+    "ilustracion": "ball-arg",
+    "categoria": "Fútbol",
+    "tienda": "adidas"
+  },
+  {
+    "nombre": "Mochila cruzada Adidas (negra)",
+    "precio": 370,
+    "url": "https://www.adidas.mx/organizador-linear/JE8341.html",
+    "ilustracion": "crossbag",
+    "categoria": "Bolsas y mochilas",
+    "tienda": "adidas"
+  },
+  {
+    "nombre": "Mochila cruzada Adidas",
+    "precio": 400,
+    "url": "https://www.adidas.mx/bolsa-organizadora-adidas-primelift/KC6921.html",
+    "ilustracion": "crossbag-beige",
+    "categoria": "Bolsas y mochilas",
+    "tienda": "adidas"
+  },
+  {
+    "nombre": "Mochila negra chica",
+    "precio": 529,
+    "url": "https://www.adidas.mx/bolsa-festival-adicolor/KD7863.html",
+    "ilustracion": "smallbag",
+    "categoria": "Bolsas y mochilas",
+    "tienda": "adidas"
+  },
+  {
+    "nombre": "Mochila grande Adidas",
+    "precio": 800,
+    "url": "https://www.adidas.mx/mochila-essentials-back-to-campus-bars/KQ6745.html",
+    "ilustracion": "backpack-ad",
+    "categoria": "Bolsas y mochilas",
+    "tienda": "adidas"
+  },
+  {
+    "nombre": "Mochila grande Nike",
+    "precio": 800,
+    "url": "https://www.nike.com/mx/t/mochila-nike-elemental-21l-Rd2lxW/DD0559-010",
+    "ilustracion": "backpack-nk",
+    "categoria": "Bolsas y mochilas",
+    "tienda": "Nike"
+  },
+  {
+    "nombre": "Calcetas Nike (6 pares)",
+    "precio": 500,
+    "url": "https://www.nike.com/mx/t/calcetines-al-tobillo-acolchados-para-ninos-nike-everyday-6-pares-859Mn1/SX6912-100",
+    "ilustracion": "socks",
+    "categoria": "Ropa y accesorios",
+    "tienda": "Nike"
+  },
+  {
+    "nombre": "Funko Max Verstappen",
+    "precio": 600,
+    "url": "https://a.co/d/06JVh2Od",
+    "ilustracion": "funko",
+    "categoria": "Coleccionables",
+    "tienda": "Amazon"
+  },
+  {
+    "nombre": "Bocina JBL",
+    "precio": 645,
+    "url": "https://a.co/d/08nISYtr",
+    "ilustracion": "speaker",
+    "categoria": "Tecnología",
+    "tienda": "Amazon"
+  },
+  {
+    "nombre": "Kit de herramientas",
+    "precio": 735,
+    "url": "https://a.co/d/0i2zuWJF",
+    "ilustracion": "tools",
+    "categoria": "Accesorios",
+    "tienda": "Amazon"
+  },
+  {
+    "nombre": "JBL GRIP (yo completo el resto)",
+    "precio": 900,
+    "url": "https://a.co/d/0bm1ZB10",
+    "ilustracion": "grip",
+    "categoria": "Tecnología",
+    "tienda": "Amazon"
+  },
+  {
+    "nombre": "Luces LED (30 metros)",
+    "precio": 700,
+    "url": "https://a.co/d/02ok71RP",
+    "ilustracion": "led",
+    "categoria": "Tecnología",
+    "tienda": "Amazon"
+  }
+]
