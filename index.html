@@ -63,4 +63,124 @@
     function render(){const arr=products.filter(matches);if(currentSort==='asc')arr.sort((a,b)=>a.precio-b.precio);else if(currentSort==='desc')arr.sort((a,b)=>b.precio-a.precio);document.querySelector('#products').innerHTML=arr.map(card).join('');document.querySelector('#count').textContent=`${arr.length} de ${products.length} regalos`;document.querySelector('#empty').style.display=arr.length?'none':'block'}
     document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{currentFilter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(btn=>{let active=btn===b;btn.classList.toggle('active',active);btn.setAttribute('aria-pressed',active?'true':'false')});render()}));document.querySelector('#sort').addEventListener('change',e=>{currentSort=e.target.value;render()});render();
   </script>
+
+<script>
+(() => {
+  if (document.querySelector('#top5-obed')) return;
+
+  const favoritos = [
+    products.find(p => p.url.includes('1d4mgmi')),
+    {
+      nombre: 'Bolsa náutica negra',
+      precio: 655,
+      url: 'https://a.co/d/0aXOyuDf',
+      ilustracion: 'crossbag',
+      categoria: 'Bolsas y mochilas',
+      tienda: 'Amazon'
+    },
+    products.find(p => p.url.includes('KC6921')),
+    products.find(p => p.url.includes('0bm1ZB10')),
+    products.find(p => p.url.includes('IB4343-010'))
+  ];
+
+  if (favoritos.some(p => !p)) return;
+
+  favoritos[2].nombre = 'Mochila cruzada Adidas PrimeLift';
+
+  // Quitar los favoritos de la lista general.
+  const urls = new Set(favoritos.map(p => p.url));
+  for (let i = products.length - 1; i >= 0; i--) {
+    if (urls.has(products[i].url)) products.splice(i, 1);
+  }
+
+  // Diseño dorado.
+  const estilo = document.createElement('style');
+  estilo.textContent = `
+    #top5-obed {
+      background: linear-gradient(135deg,#fffdf5,#f7e8bc,#fffaf0);
+      border: 2px solid #d9b565;
+      border-radius: 25px;
+      padding: 25px;
+      margin-bottom: 48px;
+      box-shadow: 0 12px 35px #92712b20;
+    }
+    #top5-obed h2 {
+      color: #755019;
+      font-size: clamp(26px,4vw,37px);
+      margin: 5px 0;
+    }
+    #top5-obed .subtitulo {
+      color: #886c40;
+      margin-bottom: 23px;
+    }
+    #top5-obed .grid {
+      grid-template-columns: repeat(auto-fit,minmax(min(100%,165px),1fr));
+      gap: 13px;
+    }
+    #top5-obed .gift-card {
+      border: 2px solid #d6b46b;
+      background: #fffdf7;
+    }
+    #top5-obed .gift-card:first-child {
+      border: 3px solid #b88628;
+      box-shadow: 0 10px 30px #b8862840;
+    }
+    #top5-obed .visual {
+      background: linear-gradient(135deg,#fff4d3,#efd28c);
+    }
+    #top5-obed .puesto {
+      position: absolute;
+      z-index: 3;
+      top: 10px;
+      left: 10px;
+      background: #88621f;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 9px;
+      font-size: 11px;
+      font-weight: 850;
+    }
+    #top5-obed .category,
+    #top5-obed .price { color: #8c621f; }
+    #top5-obed .btn-link { background: #956b22; }
+    #top5-obed .btn-link:hover { background: #725016; }
+    @media (max-width:600px) {
+      #top5-obed { padding: 17px 12px; }
+    }
+  `;
+  document.head.appendChild(estilo);
+
+  const tarjetas = favoritos.map((p, i) =>
+    card(p)
+      .replace(
+        '<div class="visual">',
+        `<div class="visual"><span class="puesto">TOP ${i + 1}</span>`
+      )
+  ).join('');
+
+  document.querySelector('#regalos').insertAdjacentHTML(
+    'afterbegin',
+    `<section id="top5-obed">
+      <p style="color:#9b772b;font-weight:850;letter-spacing:2px">
+        ✨ MIS MÁS DESEADOS ✨
+      </p>
+      <h2>🏆 Mi TOP 5 de regalos favoritos</h2>
+      <p class="subtitulo">
+        Si no sabes qué regalarme, estas son mis opciones favoritas.
+      </p>
+      <div class="grid">${tarjetas}</div>
+    </section>`
+  );
+
+  document.querySelector('.section-head .kicker').textContent =
+    'Más ideas de regalos';
+  document.querySelector('.section-head h2').textContent =
+    'Otros regalos que me gustan';
+  document.querySelector('.hero-stats span').textContent =
+    '🎁 22 ideas de regalo';
+
+  render();
+})();
+</script>
+
 </body></html>
